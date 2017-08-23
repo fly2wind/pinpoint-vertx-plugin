@@ -1,4 +1,4 @@
-## Vertx HTTP Server/Client.
+## Vertx HTTP Server/Client (Support pinpoint 1.6.0).
 
 Currently supports vertx.io 3.3.x, 3.4.1, 3.4.2
 
