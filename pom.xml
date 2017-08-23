@@ -1,14 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.navercorp.pinpoint</groupId>
-        <artifactId>pinpoint</artifactId>
-        <relativePath>../..</relativePath>
-        <version>1.6.0</version>
-    </parent>
 
+    <groupId>com.navercorp.pinpoint</groupId>
     <artifactId>pinpoint-vertx-plugin</artifactId>
+    <version>1.6.0</version>
     <name>pinpoint-vertx-plugin</name>
     <packaging>jar</packaging>
 
@@ -16,13 +12,21 @@
         <jdk.version>1.6</jdk.version>
         <jdk.home>${env.JAVA_8_HOME}</jdk.home>
         <sniffer.artifactid>java18</sniffer.artifactid>
+        <pinpoint.version>1.6.0</pinpoint.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.navercorp.pinpoint</groupId>
             <artifactId>pinpoint-bootstrap-core</artifactId>
+            <version>${pinpoint.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.navercorp.pinpoint</groupId>
+            <artifactId>pinpoint-test</artifactId>
+            <version>${pinpoint.version}</version>
+            <scope>test</scope>
         </dependency>
 
 
@@ -30,6 +34,7 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
+            <version>3.3.3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
